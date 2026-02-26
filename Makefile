@@ -2,6 +2,7 @@ install:
 	python -m pip install --upgrade pip
 	python -m pip install -r requirements.txt
 	python -m pip install black
+	python -m pip install "huggingface_hub[cli]"
 
 format:
 	python -m black *.py
@@ -25,12 +26,12 @@ update-branch:
 hf-login:
 	git pull origin update
 	git switch update
-	pip install -U "huggingface_hub[cli]"
-	huggingface-cli login --token $(HF) --add-to-git-credential
+	python -m huggingface_hub login --token $(HF)
 
 push-hub:
-	huggingface-cli upload giabaow/PulsePredictor-Automator ./App --repo-type=space --commit-message="Sync App files"
-	huggingface-cli upload giabaow/PulsePredictor-Automator ./Model /Model --repo-type=space --commit-message="Sync Model"
-	huggingface-cli upload giabaow/PulsePredictor-Automator ./Results /Metrics --repo-type=space --commit-message="Sync Model"
+	hf repo create giabaow/PulsePredictor-Automator --type=space --yes || echo "Repo exists"
+	hf upload ./App --repo-id giabaow/PulsePredictor-Automator --repo-type=space --commit-message "Sync App files"
+	hf upload ./Model --repo-id giabaow/PulsePredictor-Automator --repo-type=space --path-in-repo /Model --commit-message "Sync Model"
+	hf upload ./Results --repo-id giabaow/PulsePredictor-Automator --repo-type=space --path-in-repo /Metrics --commit-message "Sync Model"
 
-deploy: hf-login push-hubgit
+deploy: hf-login push-hub
