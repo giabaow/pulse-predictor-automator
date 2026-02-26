@@ -54,7 +54,7 @@ description = "Enter patient details to predict the likelihood of heart disease.
 article = "This app is part of a **CI/CD ML pipeline** demo. It predicts heart disease based on patient clinical data."
 
 # Launch Gradio interface
-gr.Interface(
+app = gr.Interface(
     fn=predict_heart_disease,
     inputs=inputs,
     outputs=outputs,
@@ -64,3 +64,6 @@ gr.Interface(
     article=article,
     theme=gr.themes.Soft(),
 ).launch()
+
+if __name__ == "__main__":
+    app.launch()

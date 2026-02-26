@@ -28,7 +28,7 @@ push-hub:
 	hf repos create giabaow/PulsePredictor-Automator --type=space || echo "Repo exists"
 
 	# Upload App folder
-	hf upload giabaow/PulsePredictor-Automator ./App
+	hf upload giabaow/PulsePredictor-Automator ./gradio_app.py
 
 	# Upload Model folder to /Model in repo
 	hf upload giabaow/PulsePredictor-Automator ./Model Model
