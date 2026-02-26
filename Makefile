@@ -1,7 +1,7 @@
 install:
-	python -m pip install --upgrade pip
-	python -m pip install -r requirements.txt
-	python -m pip install black
+<TAB>python -m pip install --upgrade pip
+<TAB>python -m pip install -r requirements.txt
+<TAB>python -m pip install black
 
 format:
 	python -m black *.py
