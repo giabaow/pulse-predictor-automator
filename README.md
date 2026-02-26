@@ -1,7 +1,7 @@
 # Pulse Predictor Automator
 
-[![GitHub Actions](https://img.shields.io/github/workflow/status/yourusername/pulse-predictor-automator/Continuous%20Integration)](https://github.com/yourusername/pulse-predictor-automator/actions)  
-[![License](https://img.shields.io/github/license/yourusername/pulse-predictor-automator)](LICENSE)
+[![GitHub Actions](https://img.shields.io/github/workflow/status/giabaow/pulse-predictor-automator/Continuous%20Integration)](https://github.com/giabaow/pulse-predictor-automator/actions)  
+[![License](https://img.shields.io/github/license/giabaow/pulse-predictor-automator)](LICENSE)
 
 ## Project Overview
 
@@ -26,3 +26,4 @@ The Gradio app allows users to input patient information and receive a predictio
 ---
 
 ## Project Structure
+
