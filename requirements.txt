@@ -8,3 +8,4 @@ yellowbrick
 xgboost 
 nbformat 
 lightgbm
+black

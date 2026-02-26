@@ -1,3 +1,5 @@
+import matplotlib
+matplotlib.use('Agg')
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -131,6 +133,7 @@ disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=classes)
 disp.plot(cmap=plt.cm.Blues)
 
 plt.savefig("Results/model_results.png", dpi=120)
+plt.close()
 
 import skops.io as sio
 
