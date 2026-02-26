@@ -24,9 +24,16 @@ update-branch:
 	git push --force origin HEAD:update
 
 push-hub:
+	# Ensure repo exists
 	hf repos create giabaow/PulsePredictor-Automator --type=space || echo "Repo exists"
-	hf upload giabaow/PulsePredictor-Automator ./App --repo-type=space --commit-message "Sync App files"
-	hf upload giabaow/PulsePredictor-Automator ./Model --repo-type=space --path-in-repo Model --commit-message "Sync Model"
-	hf upload giabaow/PulsePredictor-Automator ./Results --repo-type=space --path-in-repo Metrics --commit-message "Sync Results"
+
+	# Upload App folder
+	hf upload giabaow/PulsePredictor-Automator ./App
+
+	# Upload Model folder to /Model in repo
+	hf upload giabaow/PulsePredictor-Automator ./Model Model
+
+	# Upload Results folder to /Metrics in repo
+	hf upload giabaow/PulsePredictor-Automator ./Results Metrics
 
 deploy: install push-hub
