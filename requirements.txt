@@ -9,3 +9,4 @@ xgboost
 nbformat 
 lightgbm
 black
+skops
