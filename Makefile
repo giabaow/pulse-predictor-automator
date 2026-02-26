@@ -23,16 +23,25 @@ update-branch:
 	git commit -am "Update with new results"
 	git push --force origin HEAD:update
 
-hf-login:
-	git pull origin update
-	git switch update
-	pip install --upgrade huggingface_hub
-	hf login --token $(HF)
-
 push-hub:
+	# Ensure repo exists
 	hf repo create giabaow/PulsePredictor-Automator --type=space --yes || echo "Repo exists"
-	hf upload ./App --repo-id giabaow/PulsePredictor-Automator --repo-type=space --commit-message "Sync App files"
-	hf upload ./Model --repo-id giabaow/PulsePredictor-Automator --repo-type=space --path-in-repo /Model --commit-message "Sync Model"
-	hf upload ./Results --repo-id giabaow/PulsePredictor-Automator --repo-type=space --path-in-repo /Metrics --commit-message "Sync Model"
+	# Upload App folder
+	hf upload ./App \
+		--repo-id giabaow/PulsePredictor-Automator \
+		--repo-type=space \
+		--commit-message "Sync App files"
+	# Upload Model folder
+	hf upload ./Model \
+		--repo-id giabaow/PulsePredictor-Automator \
+		--repo-type=space \
+		--path-in-repo /Model \
+		--commit-message "Sync Model"
+	# Upload Results folder
+	hf upload ./Results \
+		--repo-id giabaow/PulsePredictor-Automator \
+		--repo-type=space \
+		--path-in-repo /Metrics \
+		--commit-message "Sync Results"
 
-deploy: hf-login push-hub
+deploy: install push-hub
