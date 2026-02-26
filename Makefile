@@ -26,7 +26,8 @@ update-branch:
 hf-login:
 	git pull origin update
 	git switch update
-	python -m huggingface_hub login --token $(HF)
+	pip install --upgrade huggingface_hub
+	hf login --token $(HF)
 
 push-hub:
 	hf repo create giabaow/PulsePredictor-Automator --type=space --yes || echo "Repo exists"
