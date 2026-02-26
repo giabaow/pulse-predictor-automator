@@ -10,3 +10,4 @@ nbformat
 lightgbm
 black
 skops
+gradio
