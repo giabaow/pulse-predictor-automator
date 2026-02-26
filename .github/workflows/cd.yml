@@ -4,7 +4,6 @@ on:
     workflows: ["Continuous Integration"]
     types:
       - completed
-
   workflow_dispatch:
 
 jobs:
@@ -13,7 +12,18 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Install Hugging Face CLI
+        run: pip install huggingface_hub --upgrade
+
       - name: Deployment To Hugging Face
         env:
           HF: ${{ secrets.HF }}
-        run: make install && make deploy HF=$HF
+        run: make deploy HF=$HF
