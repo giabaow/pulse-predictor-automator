@@ -1,9 +1,18 @@
 # Pulse Predictor Automator
-<!-- CI/CD Status Badge -->
-[![CI Status](https://img.shields.io/github/actions/workflow/status/giabaow/pulse-predictor-automator/ci.yml?branch=main&style=flat-square&label=CI&logo=github)](https://github.com/giabaow/pulse-predictor-automator/actions)
+<!-- CI/CD Status -->
+[![CI/CD](https://img.shields.io/github/workflow/status/giabaow/pulse-predictor-automator/Continuous%20Integration?style=flat-square&label=CI/CD&logo=github)](https://github.com/giabaow/pulse-predictor-automator/actions)
 
-<!-- License Badge -->
-[![License](https://img.shields.io/github/license/giabaow/pulse-predictor-automator?style=flat-square&color=blue)](LICENSE)
+<!-- Python Version -->
+[![Python](https://img.shields.io/badge/python-3.11-blue?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
+
+<!-- License -->
+[![License](https://img.shields.io/github/license/giabaow/pulse-predictor-automator?style=flat-square&color=green)](LICENSE)
+
+<!-- Last Commit -->
+[![Last Commit](https://img.shields.io/github/last-commit/giabaow/pulse-predictor-automator?style=flat-square&color=orange)](https://github.com/giabaow/pulse-predictor-automator/commits/main)
+
+<!-- Hugging Face Spaces -->
+[![Hugging Face](https://img.shields.io/badge/Gradio-HF%20Space-purple?style=flat-square&logo=gradio)](https://huggingface.co/spaces/giabaow/pulse-predictor-automator)
 
 ## Project Overview
 
@@ -103,4 +112,5 @@ Try the interactive Gradio app locally or deploy it to a public Hugging Face Spa
 
 ## License
 This project is licensed under the MIT License.
+
 
