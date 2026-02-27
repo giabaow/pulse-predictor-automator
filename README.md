@@ -1,7 +1,9 @@
 # Pulse Predictor Automator
+<!-- CI/CD Status Badge -->
+[![CI Status](https://img.shields.io/github/actions/workflow/status/giabaow/pulse-predictor-automator/ci.yml?branch=main&style=flat-square&label=CI&logo=github)](https://github.com/giabaow/pulse-predictor-automator/actions)
 
-[![GitHub Actions](https://img.shields.io/github/workflow/status/giabaow/pulse-predictor-automator/Continuous%20Integration)](https://github.com/giabaow/pulse-predictor-automator/actions)  
-[![License](https://img.shields.io/github/license/giabaow/pulse-predictor-automator)](LICENSE)
+<!-- License Badge -->
+[![License](https://img.shields.io/github/license/giabaow/pulse-predictor-automator?style=flat-square&color=blue)](LICENSE)
 
 ## Project Overview
 
@@ -101,3 +103,4 @@ Try the interactive Gradio app locally or deploy it to a public Hugging Face Spa
 
 ## License
 This project is licensed under the MIT License.
+
