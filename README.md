@@ -42,7 +42,7 @@ It reflects the skills and workflow principles sought for MLOps roles at compani
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/pulse-predictor-automator.git
+git clone https://github.com/giabaow/pulse-predictor-automator.git
 cd pulse-predictor-automator
 ```
 ### 2. Create and activate a Python environment
@@ -112,5 +112,6 @@ Try the interactive Gradio app locally or deploy it to a public Hugging Face Spa
 
 ## License
 This project is licensed under the MIT License.
+
 
 
