@@ -19,8 +19,6 @@
 **Pulse Predictor Automator** is a machine learning project designed to predict the likelihood of heart disease based on patient clinical data.  
 This project demonstrates **MLOps best practices** by integrating CI/CD workflows, automated training pipelines, model evaluation, and deployment to a Gradio web application.  
 
-It reflects the skills and workflow principles sought for MLOps roles at companies like **AUMOVIO**, including:
-
 - Automating AI model training and evaluation pipelines
 - Containerized workflows for reproducible AI experiments
 - Efficient management of computational resources
@@ -99,19 +97,17 @@ Try the interactive Gradio app locally or deploy it to a public Hugging Face Spa
 - Pipeline persistence with skops for reproducibility
 - Automated CI/CD workflows for training, evaluation, and deployment
 - Headless plotting for GPU/CI-friendly evaluation
-- Designed to be compatible with Linux environments, containerized workflows, and CI/CD GPU pipelines
 
 ## Skills Demonstrated
-- This project demonstrates capabilities that align with the AUMOVIO MLOps role:
 - Designing and implementing automated ML pipelines
 - Developing CI/CD workflows for AI development
-- Debugging and profiling ML model performance
+- Debugging ML model performance
 - Deploying ML models and interactive applications
 - Following best practices in Python development and software architecture
-- Working with virtual environments, containerization, and reproducible ML experiments
 
 ## License
 This project is licensed under the MIT License.
+
 
 
 
