@@ -21,6 +21,7 @@ trusted_types = [
 # Load your trained pipeline
 pipe = sio.load("./Model/pulse_pipeline.skops", trusted=trusted_types)
 
+
 # Prediction function
 def predict_heart_disease(age, sex, cp, trestbps, chol):
     """Predict heart disease based on patient features."""
@@ -29,11 +30,12 @@ def predict_heart_disease(age, sex, cp, trestbps, chol):
     label = "Heart Disease: YES" if pred == 1 else "Heart Disease: NO"
     return label
 
+
 # Gradio inputs
 inputs = [
-    gr.Slider(29, 77, step=1, label="Age"),                    # Example min/max from dataset
+    gr.Slider(29, 77, step=1, label="Age"),  # Example min/max from dataset
     gr.Radio(["M", "F"], label="Sex"),
-    gr.Radio([0, 1, 2, 3], label="Chest Pain Type (cp)"),      # cp encoded
+    gr.Radio([0, 1, 2, 3], label="Chest Pain Type (cp)"),  # cp encoded
     gr.Slider(94, 200, step=1, label="Resting Blood Pressure"),
     gr.Slider(126, 564, step=1, label="Cholesterol"),
 ]
